@@ -1,0 +1,24 @@
+# Entorno virtual (tu entorno se llama 'dev')
+dev/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+*.log
+local_settings.py
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+logs/
