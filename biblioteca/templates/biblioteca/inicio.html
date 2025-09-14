@@ -11,6 +11,49 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            margin: 15px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .nav-logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+        
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav-item a:hover {
+            background: #34495e;
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -54,6 +97,18 @@
     </style>
 </head>
 <body>
+     <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">📚 Biblioteca</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/admin/">Admin</a></li>
+                <li class="nav-item"><a href="/biblioteca/">API</a></li>
+                <li class="nav-item"><a href="/biblioteca/nacionalidades/">Nacionalidades</a></li>
+                <li class="nav-item"><a href="/biblioteca/libros/">Libros</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <h1>📚 Sistema de Gestión de Biblioteca</h1>
         <p style="text-align: center;">Bienvenido al sistema de gestión de biblioteca con Django REST Framework</p>
@@ -75,7 +130,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-            <p>✨ Desarrollado con Django REST Framework</p>
+            <p>✨ Desarrollado con Django REST Framework - LeaDev 💻🚀</p>
         </div>
     </div>
 </body>
