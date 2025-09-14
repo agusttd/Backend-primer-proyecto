@@ -4,17 +4,16 @@ from biblioteca import views
 
 router = routers.DefaultRouter() 
 
-router.register(r'nacionalidad', views.Nacionalidad_ViewSet) 
-router.register(r'autor', views.Autor_ViewSet)
-router.register(r'comuna', views.Comuna_ViewSet)
-router.register(r'direccion', views.Direccion_ViewSet)
-router.register(r'biblioteca', views.Biblioteca_ViewSet)
-router.register(r'lector', views.Lector_ViewSet)
-router.register(r'cateoria', views.Categoria_ViewSet)
-router.register(r'libro', views.Libro_ViewSet)
+router.register(r'nacionalidades', views.Nacionalidad_ViewSet) 
+router.register(r'autores', views.Autor_ViewSet)
+router.register(r'comunas', views.Comuna_ViewSet)
+router.register(r'direcciones', views.Direccion_ViewSet)
+router.register(r'bibliotecas', views.Biblioteca_ViewSet)
+router.register(r'lectores', views.Lector_ViewSet)
+router.register(r'categorias', views.Categoria_ViewSet)  
+router.register(r'libros', views.Libro_ViewSet)
+router.register(r'prestamos', views.Prestamo_ViewSet) 
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('biblioteca/listado_nacionalidades',
-         views.NacionalidadListView.as_view(), name='biblioteca')
 ]
