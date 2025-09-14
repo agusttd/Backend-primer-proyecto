@@ -14,4 +14,7 @@ router.register(r'cateoria', views.Categoria_ViewSet)
 router.register(r'libro', views.Libro_ViewSet)
 
 urlpatterns = [
- path('', include(router.urls))]
+    path('', include(router.urls)),
+    path('biblioteca/listado_nacionalidades',
+         views.NacionalidadListView.as_view(), name='biblioteca')
+]

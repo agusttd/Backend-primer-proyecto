@@ -14,6 +14,10 @@ class Nacionalidad_ViewSet(viewsets.ModelViewSet):
     queryset = Nacionalidad.objects.all()
     serializer_class = nacser
 
+class NacionalidadListView(ListView):
+    model = Nacionalidad
+    template_name = 'biblioteca/nacionalidad_list.html'
+
 class Autor_ViewSet(viewsets.ModelViewSet):
     queryset = Autor.objects.all()
     serializer_class = autser
