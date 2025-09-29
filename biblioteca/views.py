@@ -10,7 +10,7 @@ from .models import Nacionalidad, Autor, Comuna, Direccion, Biblioteca, Lector, 
 def pagina_inicio(request):
     return render(request, 'biblioteca/inicio.html')
 
-class Nacionalidad_ViewSet(viewsets.ModelViewSet):
+class NacionalidadViewSet(viewsets.ModelViewSet):
     queryset = Nacionalidad.objects.all()
     serializer_class = nacser
 
@@ -18,34 +18,34 @@ class NacionalidadListView(ListView):
     model = Nacionalidad
     template_name = 'biblioteca/nacionalidad_list.html'
 
-class Autor_ViewSet(viewsets.ModelViewSet):
+class AutorViewSet(viewsets.ModelViewSet):
     queryset = Autor.objects.all()
     serializer_class = autser
 
-class Comuna_ViewSet(viewsets.ModelViewSet):
+class ComunaViewSet(viewsets.ModelViewSet):
     queryset = Comuna.objects.all()
     serializer_class = comser
 
-class Direccion_ViewSet(viewsets.ModelViewSet):
+class DireccionViewSet(viewsets.ModelViewSet):
     queryset = Direccion.objects.all()
     serializer_class = dirser
 
-class Biblioteca_ViewSet(viewsets.ModelViewSet):
+class BibliotecaViewSet(viewsets.ModelViewSet):
     queryset = Biblioteca.objects.all()
     serializer_class = bibser
 
-class Lector_ViewSet(viewsets.ModelViewSet):
+class LectorViewSet(viewsets.ModelViewSet):
     queryset = Lector.objects.all()
     serializer_class = lecser
 
-class Categoria_ViewSet(viewsets.ModelViewSet):
+class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all()
     serializer_class = catser
 
-class Libro_ViewSet(viewsets.ModelViewSet):
+class LibroViewSet(viewsets.ModelViewSet):
     queryset = Libro.objects.all()
     serializer_class = libser
 
-class Prestamo_ViewSet(viewsets.ModelViewSet):
+class PrestamoViewSet(viewsets.ModelViewSet):
     queryset = Prestamo.objects.all()
     serializer_class = preser
