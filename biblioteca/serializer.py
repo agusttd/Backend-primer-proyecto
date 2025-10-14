@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Nacionalidad, Autor, Comuna, Direccion, Biblioteca, Lector, Categoria, Libro, Prestamo 
 
-class Nacionalidad_Serializer(serializers.ModelSerializer):
+class NacionalidadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Nacionalidad
         fields = '__all__'
