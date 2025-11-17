@@ -39,6 +39,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.pagina_inicio, name='home'),
     path('biblioteca/', include('biblioteca.urls')),
+    path('listado_libros/',views.listado_libros, name = 'listado_libros'),
 
     #url api
     path('apidocs/', schema_view.with_ui('swagger',cache_timeout=0), name='schema-swagger-ui'),
@@ -48,5 +49,5 @@ urlpatterns = [
     path('accounts/', include ('django.contrib.auth.urls')),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('registro/', views.registro, name='registro'),
+    path('registro/', views.registro, name ='registro'),
 ]

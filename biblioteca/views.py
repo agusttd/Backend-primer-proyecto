@@ -9,6 +9,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login 
 from django.contrib import messages
+import django_filters
 
 
 # Create your views here.
@@ -61,6 +62,21 @@ class LibroViewSet(viewsets.ModelViewSet):
     authentication_classes = [SessionAuthentication]
     queryset = Libro.objects.all()
     serializer_class = libser
+
+class LibroFilter(django_filters.FilterSet):
+    id_categoria = django_filters.ModelChoiceFilter(
+        queryset = Categoria.objects.all(), label='Categoría')
+    id_autor = django_filters.ModelChoiceFilter(
+        queryset = Autor.objects.all(), label='Autor')
+    class Meta:
+        model = Libro
+        fields = ['id_categoria','id_autor']
+
+def listado_libros(request):
+    f = LibroFilter(request.GET, queryset=Libro.objects.all())
+    return render(request, 'biblioteca/lista_libros.html',
+    {'filter': f})
+
 
 class PrestamoViewSet(viewsets.ModelViewSet):
     authentication_classes = [SessionAuthentication]
