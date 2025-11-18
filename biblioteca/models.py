@@ -17,8 +17,8 @@ class Direccion(models.Model):
 
 class Nacionalidad(models.Model):
     pais = models.CharField(max_length=255, null=False)
-    Nacionalidad = models.CharField(max_length=255, null=False)
-    crated_at = models.DateTimeField(auto_now_add=True)
+    nacionalidad = models.CharField(max_length=255, null=False)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
 
 class Autor(models.Model):
